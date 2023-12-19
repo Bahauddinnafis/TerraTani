@@ -10,16 +10,15 @@ import android.view.Surface
 import android.view.WindowInsets
 import android.view.WindowManager
 import android.widget.Toast
-import androidx.camera.core.CameraSelector
+import com.capstone.terratani.databinding.ActivityCameraBinding
 import androidx.camera.core.ImageCapture
+import androidx.camera.core.CameraSelector
 import androidx.camera.core.ImageCaptureException
 import androidx.camera.core.Preview
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.content.ContextCompat
-import com.capstone.terratani.R
-import com.capstone.terratani.databinding.ActivityCameraBinding
 import com.capstone.terratani.ui.result.ResultActivity
-import java.nio.file.Files.createFile
+import com.capstone.terratani.utils.createFile
 
 class CameraActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCameraBinding

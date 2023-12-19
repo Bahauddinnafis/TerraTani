@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="179dp"
+    android:layout_height="109dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="20dp"
+    app:cardCornerRadius="10dp"
+    android:backgroundTint="@color/green_master">
+
+    <ImageView
+        android:id="@+id/iv_maintance1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/pattern"
+        android:alpha="0.1"
+        android:layout_marginStart="-90dp"/>
+
+    <ImageView
+        android:id="@+id/iv_maintance2"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/pattern"
+        android:alpha="0.1"
+        android:layout_marginEnd="-128dp"/>
+
+    <TextView
+        android:id="@+id/tv_maintance"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="@string/cara_agar_tanaman_subur"
+        android:textColor="@color/white"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="10dp"/>
+
+</androidx.cardview.widget.CardView>

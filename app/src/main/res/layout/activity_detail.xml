@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_background"
+    tools:context=".ui.detail.DetailActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_detail_shop"
+            android:layout_width="match_parent"
+            android:layout_height="414dp"
+            android:layout_marginTop="-10dp"
+            android:src="@drawable/pohon_cabe"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/view_1"
+            android:layout_width="match_parent"
+            android:layout_height="86dp"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_detail_shop" />
+
+        <TextView
+            android:id="@+id/tv_title_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/bibit_unggul_pohon_cabe"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_detail_shop" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2dp"
+            android:text="@string/price"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_detail" />
+
+        <View
+            android:id="@+id/view_2"
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_1" />
+
+        <TextView
+            android:id="@+id/tv_detail_produk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="25dp"
+            android:text="@string/detail_produk"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_1" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_kondisi"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            app:constraint_referenced_ids="tv_kondisi, tv_kondisi_baru_bekas"
+            app:layout_constraintTop_toBottomOf="@id/tv_detail_produk" />
+
+        <TextView
+            android:id="@+id/tv_kondisi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/kondisi"
+            android:textColor="@color/grey_text"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_detail_produk" />
+
+        <TextView
+            android:id="@+id/tv_kondisi_baru_bekas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/kondisi_baru_bekas"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            app:layout_constraintStart_toEndOf="@id/tv_kondisi"
+            app:layout_constraintTop_toBottomOf="@id/tv_detail_produk" />
+
+        <View
+            android:id="@+id/horizontal_line1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/group_kondisi"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/grey_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_kondisi" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_pemesanan"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_marginTop="16dp"
+            app:constraint_referenced_ids="tv_min_pesanan, tv_nominal_pemesanan"
+            app:layout_constraintTop_toBottomOf="@id/horizontal_line1" />
+
+        <TextView
+            android:id="@+id/tv_min_pesanan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/min_pemesanan"
+            android:textColor="@color/grey_text"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/horizontal_line1" />
+
+        <TextView
+            android:id="@+id/tv_nominal_pemesanan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/nominal_pemesanan"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            app:layout_constraintStart_toEndOf="@id/tv_min_pesanan"
+            app:layout_constraintTop_toBottomOf="@id/horizontal_line1" />
+
+        <View
+            android:id="@+id/horizontal_line2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/grey_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_min_pesanan" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_etalase"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_marginTop="16dp"
+            app:constraint_referenced_ids="tv_etalase, tv_etalase_deskripsi"
+            app:layout_constraintTop_toBottomOf="@id/horizontal_line2" />
+
+        <TextView
+            android:id="@+id/tv_etalase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/etalase"
+            android:textColor="@color/grey_text"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/horizontal_line2" />
+
+        <TextView
+            android:id="@+id/tv_etalase_deskripsi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/etalase_description"
+            android:textColor="@color/green_master"
+            android:textSize="13sp"
+            app:layout_constraintStart_toEndOf="@id/tv_etalase"
+            app:layout_constraintTop_toBottomOf="@id/horizontal_line2" />
+
+        <View
+            android:id="@+id/horizontal_line3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/grey_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_etalase" />
+
+        <TextView
+            android:id="@+id/tv_deskripsi_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/info"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/horizontal_line3" />
+
+        <TextView
+            android:id="@+id/tv_deskripsi_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:maxLines="2"
+            android:text="@string/deskripsi_produk"
+            android:textSize="13dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_deskripsi_info" />
+
+        <View
+            android:id="@+id/view_3"
+            android:layout_width="match_parent"
+            android:layout_height="84dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_2" />
+
+        <ImageView
+            android:id="@+id/profile_picture"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/circle_shape"
+            android:src="@drawable/icon_profile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_2" />
+
+        <TextView
+            android:id="@+id/tv_store"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/store"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/profile_picture"
+            app:layout_constraintTop_toBottomOf="@id/view_2" />
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/status_store"
+            android:textColor="@color/grey_text"
+            android:textSize="10sp"
+            app:layout_constraintStart_toEndOf="@id/profile_picture"
+            app:layout_constraintTop_toBottomOf="@id/tv_store" />
+
+        <TextView
+            android:id="@+id/status_online"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="@string/status_online"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/tv_status"
+            app:layout_constraintTop_toBottomOf="@id/tv_store" />
+
+        <TextView
+            android:id="@+id/tv_store_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="14dp"
+            android:text="@string/store_city"
+            android:textColor="@color/grey_text"
+            android:textSize="10sp"
+            app:layout_constraintStart_toEndOf="@id/profile_picture"
+            app:layout_constraintTop_toBottomOf="@id/tv_store" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/white"
+            android:text="Ikuti"
+            android:textColor="@color/green_master"
+            app:cornerRadius="6dp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_store_city"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_store"
+            app:strokeColor="@color/green_master"
+            app:strokeWidth="2dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

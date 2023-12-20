@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "318226648260",
+    "project_id": "terrataniapp",
+    "storage_bucket": "terrataniapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:318226648260:android:c1e51c590b323d75e24d91",
+        "android_client_info": {
+          "package_name": "com.capstone.terratani"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "318226648260-olbf0m9qhs9adf29207vmnn9igr55r4v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.capstone.terratani",
+            "certificate_hash": "29677389e11dc6c16d6862bd4bf0e580445d7242"
+          }
+        },
+        {
+          "client_id": "318226648260-i68qbj1mlritesk06uu41jbvpfrf0ul2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_dy5G01gdaMdvDmJ6B4F8aO6kv10ueuc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "318226648260-i68qbj1mlritesk06uu41jbvpfrf0ul2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -5,8 +5,16 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import android.widget.Toast.LENGTH_SHORT
+import androidx.lifecycle.ViewModelProvider
 import com.capstone.terratani.R
+import com.capstone.terratani.ViewModelFactory
+import com.capstone.terratani.data.remote.repository.UserRepository
+import com.capstone.terratani.data.remote.response.Resource
+import com.capstone.terratani.data.remote.service.ApiConfig
 import com.capstone.terratani.databinding.ActivityLoginBinding
+import com.capstone.terratani.preferences.SettingPreferences
+import com.capstone.terratani.preferences.dataStore
 import com.capstone.terratani.ui.main.MainActivity
 import com.capstone.terratani.ui.register.RegisterActivity
 import com.google.android.gms.auth.api.signin.GoogleSignIn
@@ -22,6 +30,8 @@ class LoginActivity : AppCompatActivity() {
     lateinit var googleSignInClient: GoogleSignInClient
 
     var firebaseAuth = FirebaseAuth.getInstance()
+
+    private lateinit var viewModel: LoginViewModel
 
     companion object {
         private const val RC_SIGN_IN = 10001
@@ -39,6 +49,13 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val pref = SettingPreferences.getInstance(dataStore)
+        val apiService = ApiConfig.getApiService()
+        val userRepository = UserRepository(apiService)
+
+        val factory = ViewModelFactory.getInstance(applicationContext, pref, userRepository)
+        viewModel = ViewModelProvider(this, factory).get(LoginViewModel::class.java)
 
         progressDialog = ProgressDialog(this)
         progressDialog.setTitle("Loggin")
@@ -89,6 +106,37 @@ class LoginActivity : AppCompatActivity() {
             .addOnCompleteListener {
                 progressDialog.dismiss()
             }
+    }
+
+    private fun loginApi() {
+        binding.btnLogin.setOnClickListener {
+            val email = binding.edtEmail.text.toString().trim()
+            val password = binding.edtPassword.text.toString().trim()
+            val result = viewModel.login(email, password)
+            if (!email.isNullOrEmpty() && !password.isNullOrEmpty()) {
+                result.observe(this) {
+                    when (it) {
+                        is Resource.Loading -> {
+                            progressDialog.show()
+                        }
+
+                        is Resource.Success -> {
+                            val data = it.data
+                            val intent = Intent(this, MainActivity::class.java)
+                            startActivity(intent)
+                            finish()
+                        }
+
+                        is Resource.Error -> {
+                            Toast.makeText(this, "Login Anda Tidak Berhasil!", LENGTH_SHORT).show()
+                        }
+                    }
+                }
+            } else {
+                if (email.isNullOrEmpty()) binding.edtEmail.error = "Kolom email tidak boleh kosong"
+                if (password.isNullOrEmpty()) binding.edtPassword.error = "Kolom password tidak boleh kosong"
+            }
+        }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

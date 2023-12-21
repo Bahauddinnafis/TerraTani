@@ -112,13 +112,13 @@ object DataDummy {
             "Scan Tanah"
         ),
         Features(
-            "Sewa Tanah"
+            "Rekomendasi Tanaman"
         ),
         Features(
-            "Beli Tanah"
+            "Rekomendasi Pupuk"
         ),
         Features(
-            "Jual Tanah"
+            "Prediksi Panen"
         )
     )
 

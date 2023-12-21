@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.detection.DetectionCropActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_rekomendasi_tanaman"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rekomendasi_tanaman"
+            android:textSize="24sp"
+            android:textColor="@color/green_master"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!--    Nitrogen    -->
+        <TextView
+            android:id="@+id/tv_nitrogen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nitrogen"
+            android:textSize="18sp"
+            android:textColor="@color/green_master"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_rekomendasi_tanaman"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_nitrogren"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:textColorHint="@color/grey_text"
+            app:boxStrokeColor="@color/green_master"
+            app:hintTextColor="@color/green_master"
+            app:cursorColor="@color/green_master"
+            app:layout_constraintTop_toBottomOf="@id/tv_nitrogen"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_nitrogen"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/masukkan_nitrogen"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--    Phosporus    -->
+        <TextView
+            android:id="@+id/tv_phosporus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/phosporus"
+            android:textSize="18sp"
+            android:textColor="@color/green_master"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintTop_toBottomOf="@id/til_nitrogren"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_phosporus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:textColorHint="@color/grey_text"
+            app:boxStrokeColor="@color/green_master"
+            app:hintTextColor="@color/green_master"
+            app:cursorColor="@color/green_master"
+            app:layout_constraintTop_toBottomOf="@id/tv_phosporus"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_phosporus"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/masukkan_phosporus"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--    K (Ratio of Potassium)    -->
+        <TextView
+            android:id="@+id/tv_k"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="K (Ratio of Potassium)"
+            android:textSize="18sp"
+            android:textColor="@color/green_master"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintTop_toBottomOf="@id/til_phosporus"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_k"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:textColorHint="@color/grey_text"
+            app:boxStrokeColor="@color/green_master"
+            app:hintTextColor="@color/green_master"
+            app:cursorColor="@color/green_master"
+            app:layout_constraintTop_toBottomOf="@id/tv_k"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_k"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Masukkan K(Ratio of Potassium)"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--   Temperature     -->
+        <TextView
+            android:id="@+id/tv_temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/temperature"
+            android:textSize="18sp"
+            android:textColor="@color/green_master"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintTop_toBottomOf="@id/til_k"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_temperature"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:textColorHint="@color/grey_text"
+            app:boxStrokeColor="@color/green_master"
+            app:hintTextColor="@color/green_master"
+            app:cursorColor="@color/green_master"
+            app:layout_constraintTop_toBottomOf="@id/tv_temperature"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_temperature"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Masukkan Temperature"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--   Humidity     -->
+        <TextView
+            android:id="@+id/tv_humidity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/humidity"
+            android:textSize="18sp"
+            android:textColor="@color/green_master"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintTop_toBottomOf="@id/til_temperature"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_humidity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:textColorHint="@color/grey_text"
+            app:boxStrokeColor="@color/green_master"
+            app:hintTextColor="@color/green_master"
+            app:cursorColor="@color/green_master"
+            app:layout_constraintTop_toBottomOf="@id/tv_humidity"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_humidity"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Masukkan Humidity"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--    PH    -->
+        <TextView
+            android:id="@+id/tv_ph"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ph"
+            android:textSize="18sp"
+            android:textColor="@color/green_master"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintTop_toBottomOf="@id/til_humidity"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_ph"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:textColorHint="@color/grey_text"
+            app:boxStrokeColor="@color/green_master"
+            app:hintTextColor="@color/green_master"
+            app:cursorColor="@color/green_master"
+            app:layout_constraintTop_toBottomOf="@id/tv_ph"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_ph"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Masukkan PH"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--   Rainfall     -->
+        <TextView
+            android:id="@+id/tv_rainfall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rainfall"
+            android:textSize="18sp"
+            android:textColor="@color/green_master"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintTop_toBottomOf="@id/til_ph"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_rainfall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:textColorHint="@color/grey_text"
+            app:boxStrokeColor="@color/green_master"
+            app:hintTextColor="@color/green_master"
+            app:cursorColor="@color/green_master"
+            app:layout_constraintTop_toBottomOf="@id/tv_rainfall"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_rainfall"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Masukkan Rainfall"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btn_prediction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/green_master"
+            android:text="@string/prediksi"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintTop_toBottomOf="@id/til_rainfall"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

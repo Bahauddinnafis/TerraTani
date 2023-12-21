@@ -98,4 +98,9 @@
     <string name="prediksi">Prediksi</string>
     <string name="galeri">Galeri</string>
     <string name="kamera">Kamera</string>
+    <string name="selesai">Selesai</string>
+    <string name="hasil">Hasil</string>
+    <string name="rekomendasi_pupuk">Rekomendasi Pupuk:</string>
+    <string name="prediksi_panen">Prediksi Panen:</string>
+    <string name="rekomendasi_tanaman">Rekomendasi Tanaman</string>
 </resources>

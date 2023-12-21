@@ -1,4 +1,4 @@
-package com.capstone.terratani.ui.fragments.profile
+package com.capstone.terratani.preferences
 
 import android.content.Context
 import androidx.datastore.core.DataStore

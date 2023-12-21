@@ -7,6 +7,10 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.lifecycle.ViewModelProvider
 import com.capstone.terratani.R
 import com.capstone.terratani.ViewModelFactory
+import com.capstone.terratani.data.remote.repository.UserRepository
+import com.capstone.terratani.data.remote.service.ApiConfig
+import com.capstone.terratani.preferences.SettingPreferences
+import com.capstone.terratani.preferences.dataStore
 import com.google.android.material.switchmaterial.SwitchMaterial
 
 class SettingsActivity : AppCompatActivity() {
@@ -17,7 +21,9 @@ class SettingsActivity : AppCompatActivity() {
         val switchTheme = findViewById<SwitchMaterial>(R.id.switch_theme)
 
         val pref = SettingPreferences.getInstance(application.dataStore)
-        val settingViewModel = ViewModelProvider(this, ViewModelFactory(pref)).get(
+        val apiService = ApiConfig.getApiService()
+        val userRepository = UserRepository(apiService)
+        val settingViewModel = ViewModelProvider(this, ViewModelFactory(applicationContext, pref, userRepository)).get(
             SettingViewModel::class.java
         )
 

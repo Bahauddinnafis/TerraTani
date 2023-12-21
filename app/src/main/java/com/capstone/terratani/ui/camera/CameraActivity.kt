@@ -17,7 +17,8 @@ import androidx.camera.core.ImageCaptureException
 import androidx.camera.core.Preview
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.content.ContextCompat
-import com.capstone.terratani.ui.result.ResultActivity
+import com.capstone.terratani.ui.detection.DetectionSoilActivity
+import com.capstone.terratani.ui.result.ResultSoilActivity
 import com.capstone.terratani.utils.createFile
 
 class CameraActivity : AppCompatActivity() {
@@ -38,6 +39,12 @@ class CameraActivity : AppCompatActivity() {
 
         binding.captureImage.setOnClickListener {
             takePhoto()
+        }
+
+        binding.ivArrowBack.setOnClickListener {
+            val intent = Intent(this, DetectionSoilActivity::class.java)
+            startActivity(intent)
+            finish()
         }
     }
 
@@ -83,7 +90,7 @@ class CameraActivity : AppCompatActivity() {
         imageCapture.takePicture(outputOptions, ContextCompat.getMainExecutor(this),
             object : ImageCapture.OnImageSavedCallback {
                 override fun onImageSaved(outputFileResults: ImageCapture.OutputFileResults) {
-                    val intent = Intent(this@CameraActivity, ResultActivity::class.java)
+                    val intent = Intent(this@CameraActivity, ResultSoilActivity::class.java)
                     intent.putExtra(EXTRA_CAMERA_IMAGE, outputFileResults.savedUri.toString())
                     setResult(CAMERA_RESULT, intent)
                     finish()

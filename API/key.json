@@ -1,0 +1,14 @@
+{
+    "type": "service_account",
+    "project_id": "terratanipart1",
+    "private_key_id": "c053b4797daa43a5d531d47ec3d8d11b2859c274",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC5XMKPJdntIMmg\nRb+PBBJmm1fcH0Dodbqo1h+PmlnRxSVRrsvCxg9W8ITyELsJnJy5EwKcixp+AW59\nUkdRXSRE4fpdLYEWZ7Pg1kRAO7qYbrBPk8Ninq1dacg2y+i8YVf0aP8TyDbCbiiK\nBJgIQDGgkJDWlVyFmAniTtNwWDhYQ57NKmfRphkutrvDVXA70vdArh6TZvSERskb\nHRB0z6pbkXj5861ufsGuKLV+5DYhGaz1YMrLo+KuZh6804cOTTxDIQh/hDZYhicb\nDTyR9p1LtvsHRM44ha+xWXOXC7sTs9L0qx4vr/0V+q8+kVH0mzps6Mwvc6XWrEq1\npmxKDsSfAgMBAAECggEABSZ5YTcsaXM9YZsloQh8Ubvc5iU7fxLlAf5FFFYZhAOJ\ndqNih6VL8e0SkelBpnypyI/F02oCtF/qJEhHBq1xO+5J6NgXjYE0eOROwX+yBfV1\n0lEa5i7BuIKRF2bm59dHA702cLlTk7yj8AznZ2ZlNwzylqEXO4XrGpwHFZ35dCSM\nsvhL5ZvmWBXO4p4H2yvMVmuekjhMaWdSI9eF9CNxetlmW5TlFdW+MIU8XFIETtf5\ndJcQ4eB7vR8h/qww7Aki3jX0FEpb0r84922/I+RgHuNnVDvucy0grkyyw6yeA64M\nFmJmRWSz/MlWsGvsuuXUAlLQxVP++TDUxwBJuBm5kQKBgQDsYnx67GNwb6VbInJD\noAsJSLlJkNqiup7ziLQpukJ/JBHe6p2HgPWBTrM2MAqnaohk6wxVTXwgAlHB1r2a\nfArhiXLf5pzKJQVzXnEARyZ8CKpz/UXcPQWC6yvoCX5dPnrL7jrEwee2Wa2sVf8O\n8z9UWrKAG5jT0xZmFcIvI1HZ8QKBgQDIvmgyl8NtYch00ia80GCs6qlQn6P3Yryy\niQOvNKJLeLNY+JSnhia0a9FRIhMeC4MkRIWZB7bscV0dl4rA8ylx8Y6oXyO33mEK\nRxTTVTLV3NrWtW+DcWUX0kULmSLQiHY1Gal30Ro5Q5/B98UX+MZn758LUTzmQ3Bw\naBnPdHd3jwKBgBCMZIKGgf+hEUZsBuvNDHi96prH1UaHIhGShGpXa8hS0h1090pB\nMO64f7tPaa+Gub225soh/oqPHwIe8m8aN/jKEoyyLE/Kf7Mv7WFDmeIdCTHNjVJ5\nwyUDKbO41mvYr+gO6XZUzM/rP0lNS+nUBZ72KoDlbbGGmY7T/yAlrNlBAoGBAJaw\nuC8iVYVKndtz1bhvA+NJ1Ae9jqwp5lRvHeDrtdjJpnfnQk/vGCbfuKUa2xb2tV8I\nQPF7JQmgn7GTDImC/12VYu1pXbqsqFO6wBtUHXEE9RGv6SHWgXi8UzA9qDC5/2Ik\n/V4ADZtm9An7IGy6RtXGvrEULo77mPAIdTeRygxpAoGAK2cdk6gJSqTfG9iY4xq1\nc9pXW9+2nCjQSubOz8Ntn1594SqEINBDhCZg86MdSi/IBMR6SvIBtdBSQrqAJ4p2\nDlFseXp4xsYmQKSSGPltEkHKiHp26MQTQB2nbI6Bw+ioYc9BcbEMIXzpcQwdTi5L\n/PM1Cf2v/ZcfzAZoGwxLftc=\n-----END PRIVATE KEY-----\n",
+    "client_email": "service-account-terratani@terratanipart1.iam.gserviceaccount.com",
+    "client_id": "101531390215174338986",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/service-account-terratani%40terratanipart1.iam.gserviceaccount.com",
+    "universe_domain": "googleapis.com"
+  }
+  
